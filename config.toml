@@ -1,3 +1,102 @@
-baseURL = "http://example.org/"
-languageCode = "en-us"
-title = "My New Hugo Site"
+# baseURL = "http://example.org/"
+# languageCode = "en-us"
+# title = "My New Hugo Site"
+
+baseurl = "https://example.com"
+languageCode = "ja"
+theme = "hugo-theme-stack"
+paginate = 5
+title = "Kobayashi Yasuhiro"
+disqusShortname = "hugo-theme-stack"            # Change it to your Disqus shortname before using
+DefaultContentLanguage = "ja"                   # Theme i18n support
+
+[permalinks]
+    # post = "/p/:slug/"
+    post = "/p/:year/:month/:day/:slug"
+    page = "/:slug/"
+
+[params]
+    mainSections = ["post"]
+    featuredImageField = "image"
+    rssFullContent = true
+
+    [params.dateFormat]
+        published = "2006/01/02"
+        lastUpdated = "2006/01/02 15:04 MST"
+
+    [params.sidebar]
+        emoji = "💬"
+        avatar = "img/avatar.png"
+        subtitle = "電話の形をした技術者もどき"
+
+    [params.article]
+        math = false
+        [params.article.license]
+            enabled = true
+            default = "Kobayashi Yasuhiro 2020"
+
+    [params.comments]
+        enabled = false
+        provider = "disqus"         # Available: disqus, utterances
+        [params.comments.utterances]
+            repo = ""
+            issueTerm = "pathname"
+            label = ""             # Optional
+            theme = "preferred-color-scheme"
+
+    [params.widgets]
+        enabled = ['archives', 'tag-cloud']
+        [params.widgets.archives]
+            limit = 5
+            ### Archives page relative URL
+            path = "archives"
+        [params.widgets.tagCloud]
+            limit = 10
+
+    [params.opengraph]
+        [params.opengraph.twitter]
+            site = ""
+            card = "summary_large_image"
+
+    [params.defaultImage]
+        [params.defaultImage.opengraph]
+            enabled = false
+            local = false
+            src = ""
+
+[menu]
+    [[menu.main]]
+        identifier = "home"
+        name = "Home"
+        url = "/"
+        weight = -100
+        pre = "home"
+    [[menu.main]]
+        identifier = "about-cn"
+        name = "About"
+        url = "about"
+        weight = -90
+        pre = "user"
+    [[menu.main]]
+        identifier = "archives"
+        name = "Archives"
+        url = "archives"
+        weight = -70
+        pre = "archives"
+
+[related]
+    includeNewer = true
+    threshold = 60
+    toLower = false
+
+    [[related.indices]]
+        name = "tags"
+        weight = 100
+
+    [[related.indices]]
+        name = "categories"
+        weight = 200
+
+[markup]
+    [markup.highlight]
+        noClasses = false
