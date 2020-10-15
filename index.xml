@@ -1,4 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Kobayashi Yasuhiro</title><link>https://ppyv.github.io/</link><description>Recent content on Kobayashi Yasuhiro</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Tue, 13 Oct 2020 23:05:39 +0900</lastBuildDate><atom:link href="https://ppyv.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>大きな風呂はいいぞ</title><link>https://ppyv.github.io/p/2020/10/13/publicbath/</link><pubDate>Tue, 13 Oct 2020 23:05:39 +0900</pubDate><guid>https://ppyv.github.io/p/2020/10/13/publicbath/</guid><description>&lt;p>久しぶりに銭湯に行ってきた。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Kobayashi Yasuhiro</title><link>https://ppyv.github.io/</link><description>Recent content on Kobayashi Yasuhiro</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Thu, 15 Oct 2020 18:00:01 +0900</lastBuildDate><atom:link href="https://ppyv.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>テーマのフォント</title><link>https://ppyv.github.io/p/2020/10/15/theme/</link><pubDate>Thu, 15 Oct 2020 18:00:01 +0900</pubDate><guid>https://ppyv.github.io/p/2020/10/15/theme/</guid><description>&lt;p>とりあえず 3 本目の記事である。我ながらよく続いている方だ。&lt;/p>
+&lt;p>このブログのテーマは個人的にとても気に入っているが、フォントが中国語優先になってしまう。
+&lt;a class="link" href="https://www.notion.so/Example-Custom-font-family-for-article-content-c65b50acfc1e485daa620b6c0b4d339b" target="_blank" rel="noopener"
+>作者のマニュアル&lt;/a> に
+基づいて Lato で埋められなければ Noto Sans CJK JP で埋めてくれるように &lt;code>custom.html&lt;/code> を書いてみた。
+しかし Firefox では反映されるが Google Chrome では反映されていないように見えている。&lt;/p>
+&lt;p>当然のことながらクラスが異なる部分（タイトルとか章見出しとか）には影響が及んでいないので、これも早いところまともにしたい。
+Web 何もわからないのでカットアンドトライするしかない。&lt;/p>
+&lt;p>そういえば Tags の一覧ページがないから、それもサイドバーに出そう。&lt;/p></description></item><item><title>大きな風呂はいいぞ</title><link>https://ppyv.github.io/p/2020/10/13/publicbath/</link><pubDate>Tue, 13 Oct 2020 23:05:39 +0900</pubDate><guid>https://ppyv.github.io/p/2020/10/13/publicbath/</guid><description>&lt;p>久しぶりに銭湯に行ってきた。
 COVID-19 のアウトブレイク以後サウナが営業休止になっていたのを見て以来だから、
 概ね 4 カ月ぶりといえる。&lt;/p>
 &lt;p>番台には他業種でもよく見るようなアクリルのついたてが置かれ、料金を払いがてら検温を受ける
