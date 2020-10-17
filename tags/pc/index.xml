@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>pc on Kobayashi Yasuhiro</title><link>https://ppyv.github.io/tags/pc/</link><description>Recent content in pc on Kobayashi Yasuhiro</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Sat, 17 Oct 2020 15:13:52 +0900</lastBuildDate><atom:link href="https://ppyv.github.io/tags/pc/index.xml" rel="self" type="application/rss+xml"/><item><title>Realtek のドライバーインストールがループする</title><link>https://ppyv.github.io/p/2020/10/17/realtek-loop/</link><pubDate>Sat, 17 Oct 2020 15:13:52 +0900</pubDate><guid>https://ppyv.github.io/p/2020/10/17/realtek-loop/</guid><description>自宅の PC には GIGABYTE の X470 AORUS ULTRA GAMING (rev. 1.0) を使っていて、久しぶりにサポートページを見に行ったらいくつかドライバー1のアップデートがあった。 最新版は常に正しい（要出典）ので、アップデートに取りかかったところインストーラーから次のような流れが説明された。
+まず現在のドライバーをアンインストールする 再起動する 再起動後に新しいドライバーをインストールする 再起動する 手順に従って 2 の再起動を終えると、 3 のインストーラーが起動してきた。
+はずが、様子がおかしい。また 1 と 2 の手順を行うと言う。以降何度繰り返しても同じようになる。 どうやら 2 の再起動後に Windows が Driver store のドライバーを自動的にインストールするようで、無限ループするようである。
+「国際的な」カニさんなので、先達の情報があろうと調べたらやはり見つけた。
+RealTek Audio Driver install loop Windows 10
+曰く、
+デバイスマネージャーから Realtek (R) Audio をアンインストールする。このとき、「このデバイスのドライバー ソフトウェアを削除します。」をチェックする。 再起動を求められるが、ここで再起動 しない 新しいドライバーのインストーラーを起動してインストールする 再起動を求められたら再起動する で解決するとのこと。
+手順をなぞったところありがたいことに無事に解決した。休日の 30 分が溶けた。
+Driver のように、 3 音節以上ある -er, -or, -ar で終わる語をカナ表記する際、長音符を送るか送らないかでそれぞれ流儀がある。わたしは送る流儀である。ルーターでありエレベーターである。慣用が十分定着した語は別だが、すぐ思いつかなかった。 &amp;#x21a9;&amp;#xfe0e;</description></item></channel></rss>

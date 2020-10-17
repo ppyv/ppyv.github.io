@@ -1,4 +1,34 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Kobayashi Yasuhiro</title><link>https://ppyv.github.io/</link><description>Recent content on Kobayashi Yasuhiro</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Thu, 15 Oct 2020 18:00:01 +0900</lastBuildDate><atom:link href="https://ppyv.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>テーマのフォント</title><link>https://ppyv.github.io/p/2020/10/15/theme/</link><pubDate>Thu, 15 Oct 2020 18:00:01 +0900</pubDate><guid>https://ppyv.github.io/p/2020/10/15/theme/</guid><description>&lt;p>とりあえず 3 本目の記事である。我ながらよく続いている方だ。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Kobayashi Yasuhiro</title><link>https://ppyv.github.io/</link><description>Recent content on Kobayashi Yasuhiro</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Sat, 17 Oct 2020 15:13:52 +0900</lastBuildDate><atom:link href="https://ppyv.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Realtek のドライバーインストールがループする</title><link>https://ppyv.github.io/p/2020/10/17/realtek-loop/</link><pubDate>Sat, 17 Oct 2020 15:13:52 +0900</pubDate><guid>https://ppyv.github.io/p/2020/10/17/realtek-loop/</guid><description>&lt;p>自宅の PC には GIGABYTE の X470 AORUS ULTRA GAMING (rev. 1.0) を使っていて、久しぶりにサポートページを見に行ったらいくつかドライバー&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>のアップデートがあった。
+最新版は常に正しい（要出典）ので、アップデートに取りかかったところインストーラーから次のような流れが説明された。&lt;/p>
+&lt;ol>
+&lt;li>まず現在のドライバーをアンインストールする&lt;/li>
+&lt;li>再起動する&lt;/li>
+&lt;li>再起動後に新しいドライバーをインストールする&lt;/li>
+&lt;li>再起動する&lt;/li>
+&lt;/ol>
+&lt;p>手順に従って 2 の再起動を終えると、 3 のインストーラーが起動してきた。&lt;/p>
+&lt;p>はずが、様子がおかしい。また 1 と 2 の手順を行うと言う。以降何度繰り返しても同じようになる。
+どうやら 2 の再起動後に Windows が Driver store のドライバーを自動的にインストールするようで、無限ループするようである。&lt;/p>
+&lt;p>「国際的な」カニさんなので、先達の情報があろうと調べたらやはり見つけた。&lt;/p>
+&lt;p>&lt;a class="link" href="https://www.gfisk.com/realtek-audio-driver-install-loop-windows-10/" target="_blank" rel="noopener"
+>RealTek Audio Driver install loop Windows 10&lt;/a>&lt;/p>
+&lt;p>曰く、&lt;/p>
+&lt;ol>
+&lt;li>デバイスマネージャーから Realtek (R) Audio をアンインストールする。このとき、「このデバイスのドライバー ソフトウェアを削除します。」をチェックする。&lt;/li>
+&lt;li>再起動を求められるが、ここで再起動 &lt;strong>しない&lt;/strong>&lt;/li>
+&lt;li>新しいドライバーのインストーラーを起動してインストールする&lt;/li>
+&lt;li>再起動を求められたら再起動する&lt;/li>
+&lt;/ol>
+&lt;p>で解決するとのこと。&lt;/p>
+&lt;p>手順をなぞったところありがたいことに無事に解決した。休日の 30 分が溶けた。&lt;/p>
+&lt;section class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1" role="doc-endnote">
+&lt;p>Driver のように、 3 音節以上ある -er, -or, -ar で終わる語をカナ表記する際、長音符を送るか送らないかでそれぞれ流儀がある。わたしは送る流儀である。ルーターでありエレベーターである。慣用が十分定着した語は別だが、すぐ思いつかなかった。 &lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/section></description></item><item><title>テーマのフォント</title><link>https://ppyv.github.io/p/2020/10/15/theme/</link><pubDate>Thu, 15 Oct 2020 18:00:01 +0900</pubDate><guid>https://ppyv.github.io/p/2020/10/15/theme/</guid><description>&lt;p>とりあえず 3 本目の記事である。我ながらよく続いている方だ。&lt;/p>
 &lt;p>このブログのテーマは個人的にとても気に入っているが、フォントが中国語優先になってしまう。
 &lt;a class="link" href="https://www.notion.so/Example-Custom-font-family-for-article-content-c65b50acfc1e485daa620b6c0b4d339b" target="_blank" rel="noopener"
 >作者のマニュアル&lt;/a> に
