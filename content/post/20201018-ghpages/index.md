@@ -4,7 +4,7 @@ description: "このサイトの組み立て方"
 slug: "ghpages"
 date: 2020-10-18T12:04:30+09:00
 tags: ['github','hugo']
-draft: true
+draft: false
 ---
 
 [最初のポスト]({{< relref "/post/20201011-init/index.md" >}}) とタイトルがほぼかぶっているが、
