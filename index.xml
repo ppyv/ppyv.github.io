@@ -1,4 +1,107 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Kobayashi Yasuhiro</title><link>https://ppyv.github.io/</link><description>Recent content on Kobayashi Yasuhiro</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Sat, 17 Oct 2020 15:13:52 +0900</lastBuildDate><atom:link href="https://ppyv.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Realtek のドライバーインストールがループする</title><link>https://ppyv.github.io/p/2020/10/17/realtek-loop/</link><pubDate>Sat, 17 Oct 2020 15:13:52 +0900</pubDate><guid>https://ppyv.github.io/p/2020/10/17/realtek-loop/</guid><description>&lt;p>自宅の PC には GIGABYTE の X470 AORUS ULTRA GAMING (rev. 1.0) を使っていて、久しぶりにサポートページを見に行ったらいくつかドライバー&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>のアップデートがあった。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Kobayashi Yasuhiro</title><link>https://ppyv.github.io/</link><description>Recent content on Kobayashi Yasuhiro</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Sun, 18 Oct 2020 12:04:30 +0900</lastBuildDate><atom:link href="https://ppyv.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo と GitHub Pages と Actions</title><link>https://ppyv.github.io/p/2020/10/18/ghpages/</link><pubDate>Sun, 18 Oct 2020 12:04:30 +0900</pubDate><guid>https://ppyv.github.io/p/2020/10/18/ghpages/</guid><description>&lt;p>&lt;a class="link" href="https://ppyv.github.io/p/2020/10/11/hugo/" >最初のポスト&lt;/a> とタイトルがほぼかぶっているが、
+このポストでは具体的にどのようにこのサイトを組み立てたかを記録する。&lt;/p>
+&lt;h1 id="手順">手順&lt;/h1>
+&lt;h2 id="repository-の準備">Repository の準備&lt;/h2>
+&lt;p>GitHub Pages の個人ページとして立ち上げることを考えていたため、 ppyv.github.io の名を持つリポジトリを立ち上げる。
+リポジトリのページであれば名前はなんでもよい（ &lt;code>http://&amp;lt;username&amp;gt;.github.io/&amp;lt;reponame&amp;gt;&lt;/code> となる）。&lt;/p>
+&lt;h2 id="hugo-の準備">Hugo の準備&lt;/h2>
+&lt;p>このセクションの内容は &lt;a class="link" href="https://gohugo.io/getting-started/quick-start/" target="_blank" rel="noopener"
+>Hugo Quick Start&lt;/a> と大差がない。&lt;/p>
+&lt;h3 id="ルートディレクトリの初期化">ルートディレクトリの初期化&lt;/h3>
+&lt;p>&lt;code>hugo new site ${sitename}&lt;/code> で立ち上げられるが、そのときの挙動が
+「カレントディレクトリの下に、 &lt;code>${sitename}&lt;/code> を持つディレクトリを掘って、必要なアセットを置く」となっている。
+このとき &lt;code>${sitename}&lt;/code> と同じ名前を持つディレクトリがあるとコマンドが失敗終了する。&lt;/p>
+&lt;p>前の手順で、 GitHub.com や GitHub Desktop などで Create repository してから Clone してくる方式をとる場合、
+この制限に引っかかる。 &lt;code>--force&lt;/code> オプションをつけるとこの制限を回避できる。&lt;/p>
+&lt;h3 id="テーマを引っ張ってくる">テーマを引っ張ってくる&lt;/h3>
+&lt;p>テーマがないとレンダリングがまともにできないので、 &lt;a class="link" href="https://themes.gohugo.io/" target="_blank" rel="noopener"
+>Hugo Themes&lt;/a> などから探してくる。&lt;/p>
+&lt;p>見つかったらルートディレクトリの下にある &lt;code>themes&lt;/code> に追加する。
+わたしは Git のサブモジュール機能を使ったが、単に Clone してくるだけでもよいだろう。&lt;/p>
+&lt;p>今回利用したのは &lt;a class="link" href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener"
+>Hugo Theme Stack&lt;/a> である (Thanks Jimmy!) 。&lt;/p>
+&lt;p>&lt;code>config.toml&lt;/code> に &lt;code>theme = hugo-theme-stack&lt;/code> などと指定するのも忘れずに。&lt;/p>
+&lt;h3 id="optional-configtoml-のチューニング">(Optional) config.toml のチューニング&lt;/h3>
+&lt;p>テーマには exampleSite が存在することが多い。そこから config.toml を引っ張ってくることで、設定を煮詰める土台として使うことができる。&lt;/p>
+&lt;h3 id="記事を書く">記事を書く&lt;/h3>
+&lt;p>割愛。&lt;/p>
+&lt;h2 id="github-actions-の準備">GitHub Actions の準備&lt;/h2>
+&lt;p>&lt;a class="link" href="https://github.co.jp/features/actions" target="_blank" rel="noopener"
+>GitHub Actions&lt;/a> は GitHub.com 備え付けのワークフロー自動化ツールである。
+ありがたいことにパブリックリポジトリでは無料で使うことができ、プライベートリポジトリでも無料枠が用意されている。&lt;/p>
+&lt;p>イメージとしては GitHub 上で動く VM 上で何かさせるものではあるが、 GitHub 上に「プリセット」のようなものがいくつか存在する。
+今回は次の 2 つを利用した。&lt;/p>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://github.com/peaceiris/actions-hugo" target="_blank" rel="noopener"
+>GitHub Actions for Hugo&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://github.com/peaceiris/actions-gh-pages" target="_blank" rel="noopener"
+>GitHub Actions for GitHub Pages&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>それぞれ Hugo のビルドを行う、ビルドされた HTML などを GitHub Pages のお作法に基づいてデプロイする Action である (Thanks peaceiris-san!) 。&lt;/p>
+&lt;p>&lt;code>/.github/workflows/&lt;/code> ディレクトリ以下に YAML でワークフローを記載していく。
+今回は &lt;code>gh-pages.yml&lt;/code> ファイルに記述している。ファイル名はなんでもよい。
+2020/10/18 時点でコミットしてあるファイルは次の内容になっている。&lt;/p>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="nn">---&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Build sites&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">on&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">push&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">branches&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="l">main&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">jobs&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">deploy&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">runs-on&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">ubuntu-18.04&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">steps&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Checkout&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">uses&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">actions/checkout@v2&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">with&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">submodules&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">fetch-depth&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">0&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Setup Hugo&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">uses&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">peaceiris/actions-hugo@v2&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">with&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">hugo-version&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;latest&amp;#39;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">extended&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Build&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">run&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">hugo --minify&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">deploy&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">uses&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">peaceiris/actions-gh-pages@v3&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">with&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">github_token&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">${{ secrets.GITHUB_TOKEN }}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">publish_dir&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">./public&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">cname&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">blog.kbys.info&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>どんな環境でも大方これで稼働する&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>が、最終行の &lt;code>cname&lt;/code> は環境によって値が異なる&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>。
+これは GitHub Pages を独自ドメインで運用する場合に必要なパラメーターであり、必要がなければ行ごと削除する。&lt;/p>
+&lt;p>また on セクションのブランチ名は環境によって異なる。デフォルトブランチ名が main の人はこのままでよいし、 master の人は master にしなければならない。
+このセクションは「main ブランチにプッシュがあったとき、このワークフローが発火する」ことを意味している。
+ここをいじることで、異なるタイミング（Pull request が飛んできたとき、など）に発火するワークフローも組める。
+例えば Lint して、その結果を PR 側に表示させることもできる。&lt;/p>
+&lt;h2 id="github-pages-の設定">GitHub Pages の設定&lt;/h2>
+&lt;p>GitHub のリポジトリページで Settings を開くと、下の方に GitHub Pages のセクションがある。&lt;/p>
+&lt;p>ここで次のように設定する。&lt;/p>
+&lt;ul>
+&lt;li>Source: Branch を &lt;code>None&lt;/code> から &lt;code>gh-pages&lt;/code> に、 Folder を &lt;code>/ (root)&lt;/code> にして Save する。&lt;/li>
+&lt;/ul>
+&lt;p>これで画面上に表示された URL から成果物にアクセスできるようになった。&lt;/p>
+&lt;h1 id="日頃の運用">日頃の運用&lt;/h1>
+&lt;p>記事を書いて master (main) ブランチに Commit &amp;amp; Push するだけで、自動的にビルド＆デプロイが行われる。&lt;/p>
+&lt;h1 id="まとめ">まとめ&lt;/h1>
+&lt;p>Hugo と GitHub Actions, GitHub Pages を組み合わせることで、簡易に Web サイトを構築・提供する方法を説明した。&lt;/p>
+&lt;section class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1" role="doc-endnote">
+&lt;p>もっともこのコンフィグも GitHub Actions for Hugo リポジトリの README から引っ張ってきたものと本質的な差がない。 &lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:2" role="doc-endnote">
+&lt;p>最初この設定が漏れていて、ワークフローが発火して走行するたびに独自ドメインが 404 になる事象があったことは内緒である。 GitHub Pages がカスタムドメインを「公開フォルダのルートにある、 CNAME ファイルに記録している」仕様を把握していなかったことによる凡ミスだった。 &lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/section></description></item><item><title>Realtek のドライバーインストールがループする</title><link>https://ppyv.github.io/p/2020/10/17/realtek-loop/</link><pubDate>Sat, 17 Oct 2020 15:13:52 +0900</pubDate><guid>https://ppyv.github.io/p/2020/10/17/realtek-loop/</guid><description>&lt;p>自宅の PC には GIGABYTE の X470 AORUS ULTRA GAMING (rev. 1.0) を使っていて、久しぶりにサポートページを見に行ったらいくつかドライバー&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>のアップデートがあった。
 最新版は常に正しい（要出典）ので、アップデートに取りかかったところインストーラーから次のような流れが説明された。&lt;/p>
 &lt;ol>
 &lt;li>まず現在のドライバーをアンインストールする&lt;/li>
