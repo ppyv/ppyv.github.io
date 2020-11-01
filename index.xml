@@ -47,7 +47,15 @@
 「法の趣旨を踏まえると、こういう方法があるで」って話かもしれない。&lt;/p>
 &lt;h1 id="もしかすると">もしかすると&lt;/h1>
 &lt;p>もしドコモ口座の件と同様に、Web口振受付サービスで可とされただけで法の求める取引時確認を済ませたと了解しているのであれば、「dカードを本人のあずかり知らないところで申し込まれてしまう」事案が起こりうる。&lt;/p>
-&lt;p>ドコモからどういう連絡が来るか、注目して待つ。&lt;/p></description></item><item><title>Hugo と GitHub Pages と Actions</title><link>https://ppyv.github.io/p/2020/10/18/ghpages/</link><pubDate>Sun, 18 Oct 2020 12:04:30 +0900</pubDate><guid>https://ppyv.github.io/p/2020/10/18/ghpages/</guid><description>&lt;p>&lt;a class="link" href="https://ppyv.github.io/p/2020/10/11/hugo/" >最初のポスト&lt;/a> とタイトルがほぼかぶっているが、
+&lt;p>ドコモからどういう連絡が来るか、注目して待つ。&lt;/p>
+&lt;h1 id="補遺">補遺&lt;/h1>
+&lt;p>職場の知り合いから興味深い資料が送られてきたので備忘として張っておく。&lt;/p>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://www.meti.go.jp/press/2020/04/20200417002/20200417002-3.pdf" target="_blank" rel="noopener"
+>オンラインサービスにおける身元確認手法の整理に関する検討報告書&lt;/a> 経済産業省、国立研究開発法人 新エネルギー・産業技術総合開発機構、 PwC コンサルティング&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.openid.or.jp/news/oidfj_kycwg_report_20200123.pdf" target="_blank" rel="noopener"
+>サービス事業者のための、本人確認手続き（KYC）に関する調査レポート&lt;/a> OpenID ファウンデーション・ジャパン KYC ワーキンググループ&lt;/li>
+&lt;/ul></description></item><item><title>Hugo と GitHub Pages と Actions</title><link>https://ppyv.github.io/p/2020/10/18/ghpages/</link><pubDate>Sun, 18 Oct 2020 12:04:30 +0900</pubDate><guid>https://ppyv.github.io/p/2020/10/18/ghpages/</guid><description>&lt;p>&lt;a class="link" href="https://ppyv.github.io/p/2020/10/11/hugo/" >最初のポスト&lt;/a> とタイトルがほぼかぶっているが、
 このポストでは具体的にどのようにこのサイトを組み立てたかを記録する。&lt;/p>
 &lt;h1 id="手順">手順&lt;/h1>
 &lt;h2 id="repository-の準備">Repository の準備&lt;/h2>

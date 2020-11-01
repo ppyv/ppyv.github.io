@@ -12,7 +12,8 @@ Web 口振受付サービス 最後に驚いたのが、d払いとドコモ口�
 このほかに本人確認書類の画像の送信させ、あるいは住民票の写し（原本）を送付させ、それらに記された住所宛に書留郵便を転送不要扱いで送る方法もある。
 なんにしても、本人確認書類の提示を受けなければならないと書かれているように見える。 もっとも、概要に例示されているだけで法や法施行令、法施行規則に記されているかはわからない。 「法の趣旨を踏まえると、こういう方法があるで」って話かもしれない。
 もしかすると もしドコモ口座の件と同様に、Web口振受付サービスで可とされただけで法の求める取引時確認を済ませたと了解しているのであれば、「dカードを本人のあずかり知らないところで申し込まれてしまう」事案が起こりうる。
-ドコモからどういう連絡が来るか、注目して待つ。</description></item><item><title>Hugo と GitHub Pages と Actions</title><link>https://ppyv.github.io/p/2020/10/18/ghpages/</link><pubDate>Sun, 18 Oct 2020 12:04:30 +0900</pubDate><guid>https://ppyv.github.io/p/2020/10/18/ghpages/</guid><description>最初のポスト とタイトルがほぼかぶっているが、 このポストでは具体的にどのようにこのサイトを組み立てたかを記録する。
+ドコモからどういう連絡が来るか、注目して待つ。
+補遺 職場の知り合いから興味深い資料が送られてきたので備忘として張っておく。</description></item><item><title>Hugo と GitHub Pages と Actions</title><link>https://ppyv.github.io/p/2020/10/18/ghpages/</link><pubDate>Sun, 18 Oct 2020 12:04:30 +0900</pubDate><guid>https://ppyv.github.io/p/2020/10/18/ghpages/</guid><description>最初のポスト とタイトルがほぼかぶっているが、 このポストでは具体的にどのようにこのサイトを組み立てたかを記録する。
 手順 Repository の準備 GitHub Pages の個人ページとして立ち上げることを考えていたため、 ppyv.github.io の名を持つリポジトリを立ち上げる。 リポジトリのページであれば名前はなんでもよい（ http://&amp;lt;username&amp;gt;.github.io/&amp;lt;reponame&amp;gt; となる）。
 Hugo の準備 このセクションの内容は Hugo Quick Start と大差がない。
 ルートディレクトリの初期化 hugo new site ${sitename} で立ち上げられるが、そのときの挙動が 「カレントディレクトリの下に、 ${sitename} を持つディレクトリを掘って、必要なアセットを置く」となっている。 このとき ${sitename} と同じ名前を持つディレクトリがあるとコマンドが失敗終了する。
