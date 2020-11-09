@@ -1,6 +1,6 @@
 ---
 title: "dカード来る（本人確認なしで）"
-description: ""
+description: "これは……いいんだったっけ？"
 slug: "dcard arrived without kyc"
 date: 2020-11-09T21:16:23+09:00
 tags: ['NTT ドコモ']
