@@ -1,4 +1,49 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Kobayashi Yasuhiro</title><link>https://ppyv.github.io/</link><description>Recent content on Kobayashi Yasuhiro</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Sun, 01 Nov 2020 14:52:05 +0900</lastBuildDate><atom:link href="https://ppyv.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>dカードを申し込んでみたものの</title><link>https://ppyv.github.io/p/2020/11/01/dcard/</link><pubDate>Sun, 01 Nov 2020 14:52:05 +0900</pubDate><guid>https://ppyv.github.io/p/2020/11/01/dcard/</guid><description>&lt;p>わけあってdカードをオンライン申し込みした。ドコモに対する電気通信契約はないけど。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Kobayashi Yasuhiro</title><link>https://ppyv.github.io/</link><description>Recent content on Kobayashi Yasuhiro</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Mon, 09 Nov 2020 21:16:23 +0900</lastBuildDate><atom:link href="https://ppyv.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>dカード来る（本人確認なしで）</title><link>https://ppyv.github.io/p/2020/11/09/dcard-arrived-without-kyc/</link><pubDate>Mon, 09 Nov 2020 21:16:23 +0900</pubDate><guid>https://ppyv.github.io/p/2020/11/09/dcard-arrived-without-kyc/</guid><description>&lt;p>先日、 &lt;a class="link" href="https://ppyv.github.io/p/2020/11/01/dcard/" >dカードが本人確認なく申し込めたとの記事&lt;/a>
+を書いたが、 7 日に簡易書留として到着した（当日は不在だったので実際に受け取ったのは 8 日）。&lt;/p>
+&lt;p>これが問題の写真。
+&lt;figure>
+&lt;a href="https://ppyv.github.io/p/2020/11/09/dcard-arrived-without-kyc/dcard.jpg" data-size="1024x768">
+&lt;img srcset="https://ppyv.github.io/p/2020/11/09/dcard-arrived-without-kyc/dcard_hubf0883871f5a95c07b26de937c6fb7f7_1157265_480x0_resize_q75_box.jpg 480w, https://ppyv.github.io/p/2020/11/09/dcard-arrived-without-kyc/dcard_hubf0883871f5a95c07b26de937c6fb7f7_1157265_1024x0_resize_q75_box.jpg 1024w"
+src="https://ppyv.github.io/p/2020/11/09/dcard-arrived-without-kyc/dcard.jpg" width="1024" height="768" loading="lazy"
+alt="よく見ると「簡易郵便」になっててそこもおかしい">
+&lt;/a>
+&lt;figcaption>よく見ると「簡易郵便」になっててそこもおかしい&lt;/figcaption>
+&lt;/figure>&lt;/p>
+&lt;p>恐る恐る封筒を開けると、内容物は次の通り。&lt;/p>
+&lt;ul>
+&lt;li>カードそのものが貼り付けられた台紙・宛名紙&lt;/li>
+&lt;li>Visa のタッチ決済対応カードのご案内&lt;/li>
+&lt;li>まだまだあります!! おトクで便利なdカードのつかいかた!!&lt;/li>
+&lt;li>d CARD スタートアップガイド&lt;/li>
+&lt;li>dカードのはじめかた&lt;/li>
+&lt;li>dカードか利用規約（会員規約）&lt;/li>
+&lt;/ul>
+&lt;p>つまり本人確認書類の返送を求められていない、ということになるようだ。&lt;/p>
+&lt;h1 id="すなわち">すなわち&lt;/h1>
+&lt;p>ここまでに私が提出した情報を持って、本人確認は完了しているとのスタンスのようである。&lt;/p>
+&lt;p>前の記事で書いたような、犯罪収益移転防止法が求める &lt;strong>本人特定事項の確認&lt;/strong> のために &lt;strong>「書類」を「定められた方法で確認すること」&lt;/strong> が行われていないような気がするのだが……。&lt;/p>
+&lt;h1 id="これって結局">これって結局&lt;/h1>
+&lt;p>ドコモ口座とまるっきり同じことが起きているのではないだろうか。&lt;/p>
+&lt;p>スクリーンショットを撮っておくべきだったが、私が申し込みにあたって提示した情報は概ね次の通りである。&lt;/p>
+&lt;ul>
+&lt;li>個人の情報（氏名、住所、電話番号など）&lt;/li>
+&lt;li>勤務先の情報（名称、住所、電話番号、職位、従業員規模など）&lt;/li>
+&lt;li>口座振替先に関する情報（地銀ネットワークサービス経由で申し込み）&lt;/li>
+&lt;/ul>
+&lt;p>まさかとは思うが、「Web 口振受付サービスで認証が通ったから本人確認しました」とおっしゃるわけではあるまいな。
+結局「その銀行に取引があること」まではわかっても、「画面の前で申し込んだのが本人である」ことは確認できないのだが。&lt;/p>
+&lt;h1 id="考え得るストーリー">考え得るストーリー&lt;/h1>
+&lt;p>最悪のケースは &lt;strong>知らないうちにdカードを契約されてあれもこれも買い物される&lt;/strong> ことだろう。&lt;/p>
+&lt;p>ドコモ口座よりたちが悪いのは、dカードの場合実際に購買した日と引き落とされる日にそれなりに間が空くことだ（締め日と引き落とし日の関係）。ドコモ口座の場合引き落としが即時であって購買の方が後につく。&lt;/p>
+&lt;p>不正利用防止のためのシステムに検知されることも考えられるが、いきなり多額の決済をしたり、あちこちの加盟店で決済したりしなければある程度回避できるだろう。&lt;/p>
+&lt;h1 id="今後">今後&lt;/h1>
+&lt;p>どうしようかな。問い合わせ窓口にどうなってんの？って投げ込むのもいいけど体力が。&lt;/p>
+&lt;ul>
+&lt;li>本人確認書類の提示を求めなかった理由は何か&lt;/li>
+&lt;li>（本人確認書類の提示を求めるケースは何か）&lt;/li>
+&lt;li>犯罪収益移転防止法の求める取引時確認を行ったと考える根拠は何か&lt;/li>
+&lt;/ul>
+&lt;p>この3点くらいは問い合わせるべきだろうか。&lt;/p></description></item><item><title>dカードを申し込んでみたものの</title><link>https://ppyv.github.io/p/2020/11/01/dcard/</link><pubDate>Sun, 01 Nov 2020 14:52:05 +0900</pubDate><guid>https://ppyv.github.io/p/2020/11/01/dcard/</guid><description>&lt;p>わけあってdカードをオンライン申し込みした。ドコモに対する電気通信契約はないけど。&lt;/p>
 &lt;p>フォームの UX がいまいち（住所検索がなぜか郵便番号 or 電話番号による検索だったり、そのくせ自宅電話番号はもう一回入力させたり、勤務先がいまどき 10 文字以内だったり、などなど）だった。
 こういうところはクレセゾンとかの方が一枚以上上手かなと思う。&lt;/p>
 &lt;h1 id="web-口振受付サービス">Web 口振受付サービス&lt;/h1>
@@ -55,7 +100,9 @@
 >オンラインサービスにおける身元確認手法の整理に関する検討報告書&lt;/a> 経済産業省、国立研究開発法人 新エネルギー・産業技術総合開発機構、 PwC コンサルティング&lt;/li>
 &lt;li>&lt;a class="link" href="https://www.openid.or.jp/news/oidfj_kycwg_report_20200123.pdf" target="_blank" rel="noopener"
 >サービス事業者のための、本人確認手続き（KYC）に関する調査レポート&lt;/a> OpenID ファウンデーション・ジャパン KYC ワーキンググループ&lt;/li>
-&lt;/ul></description></item><item><title>Hugo と GitHub Pages と Actions</title><link>https://ppyv.github.io/p/2020/10/18/ghpages/</link><pubDate>Sun, 18 Oct 2020 12:04:30 +0900</pubDate><guid>https://ppyv.github.io/p/2020/10/18/ghpages/</guid><description>&lt;p>&lt;a class="link" href="https://ppyv.github.io/p/2020/10/11/hugo/" >最初のポスト&lt;/a> とタイトルがほぼかぶっているが、
+&lt;/ul>
+&lt;h1 id="追記-20201109">追記 (2020/11/09)&lt;/h1>
+&lt;p>結局カードが届いてしまった。その顛末は &lt;a class="link" href="https://ppyv.github.io/p/2020/11/09/dcard-arrived-without-kyc/" >こちら&lt;/a> 。&lt;/p></description></item><item><title>Hugo と GitHub Pages と Actions</title><link>https://ppyv.github.io/p/2020/10/18/ghpages/</link><pubDate>Sun, 18 Oct 2020 12:04:30 +0900</pubDate><guid>https://ppyv.github.io/p/2020/10/18/ghpages/</guid><description>&lt;p>&lt;a class="link" href="https://ppyv.github.io/p/2020/10/11/hugo/" >最初のポスト&lt;/a> とタイトルがほぼかぶっているが、
 このポストでは具体的にどのようにこのサイトを組み立てたかを記録する。&lt;/p>
 &lt;h1 id="手順">手順&lt;/h1>
 &lt;h2 id="repository-の準備">Repository の準備&lt;/h2>
