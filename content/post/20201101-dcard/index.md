@@ -3,8 +3,9 @@ title: "dカードを申し込んでみたものの"
 description: "本人確認と口振受付サービスと犯罪収益移転防止法"
 slug: "dcard"
 date: 2020-11-01T14:52:05+09:00
-lastmod: 2020-11-01T15:32:00+09:00
-tags: []
+lastmod: 2020-11-09T21:16:23+09:00
+tags: ['NTT ドコモ']
+categories: ['research']
 draft: false
 ---
 
@@ -71,3 +72,6 @@ draft: false
 
 - [オンラインサービスにおける身元確認手法の整理に関する検討報告書](https://www.meti.go.jp/press/2020/04/20200417002/20200417002-3.pdf) 経済産業省、国立研究開発法人 新エネルギー・産業技術総合開発機構、 PwC コンサルティング
 - [サービス事業者のための、本人確認手続き（KYC）に関する調査レポート](https://www.openid.or.jp/news/oidfj_kycwg_report_20200123.pdf) OpenID ファウンデーション・ジャパン KYC ワーキンググループ
+
+# 追記 (2020/11/09)
+結局カードが届いてしまった。その顛末は [こちら]({{< relref "/post/20201109-dcard-arrived-without-kyc/index.md" >}}) 。
