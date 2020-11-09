@@ -55,14 +55,14 @@ DefaultContentLanguage = "ja"                   # Theme i18n support
 
     [params.opengraph]
         [params.opengraph.twitter]
-            site = ""
-            card = "summary_large_image"
+            site = "@ppyv"
+            card = "summary"
 
     [params.defaultImage]
         [params.defaultImage.opengraph]
-            enabled = false
-            local = false
-            src = ""
+            enabled = true
+            local = true
+            src = "img/avatar.png"
 
 [menu]
     [[menu.main]]
